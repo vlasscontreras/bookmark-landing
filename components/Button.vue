@@ -1,20 +1,19 @@
 <template>
-  <nuxt-link v-if="to !== null" :to="to" :class="classname">
+  <nuxt-link v-if="to !== null" :to="to" :class="classname" v-on="listeners">
     <slot />
   </nuxt-link>
 
-  <a v-else-if="href !== null" :href="href" :class="classname">
+  <a v-else-if="href !== null" :href="href" :class="classname" v-on="listeners">
     <slot />
   </a>
 
-  <button v-else :class="classname">
+  <button v-else :class="classname" v-on="listeners">
     <slot />
   </button>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import classnames from 'classnames';
+import Vue, { ComputedOptions } from 'vue';
 
 export default Vue.extend({
   props: {
@@ -33,8 +32,13 @@ export default Vue.extend({
   },
 
   computed: {
-    classname (): string {
-      return classnames(
+    listeners (): ComputedOptions<any> {
+      return this.$listeners;
+    },
+
+    classname (): Array<String> {
+      return [
+        'inline-block',
         'px-8',
         'py-3',
         'rounded',
@@ -46,8 +50,9 @@ export default Vue.extend({
         'focus:ring-2',
         'focus:ring-offset-2',
         'focus:ring-offset-white',
-        this.getVariantClasses(),
-      );
+        'text-center',
+        ...this.getVariantClasses(),
+      ];
     },
   },
 
