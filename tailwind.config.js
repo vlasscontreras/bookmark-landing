@@ -3,18 +3,18 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: 'var(--font-base)',
+      sans: ['Rubik', 'sans-serif'],
     },
     extend: {
       colors: {
-        neutral: 'var(--color-grayish-blue)',
+        neutral: '#9194a1',
         primary: {
-          DEFAULT: 'var(--color-soft-blue)',
-          dark: 'var(--color-dark-blue)',
+          DEFAULT: '#5368df',
+          dark: '#252b46',
         },
         secondary: {
-          DEFAULT: 'var(--color-soft-red)',
-          dark: 'var(--color-soft-red-dark)',
+          DEFAULT: '#fa5757',
+          dark: '#e94949',
         },
       },
     },
