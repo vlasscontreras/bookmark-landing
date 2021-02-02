@@ -11,5 +11,8 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'comma-dangle': 0,
+    semi: 0,
+  }
 }
