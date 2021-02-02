@@ -33,6 +33,15 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-fonts.nuxtjs.org/
+    ['@nuxtjs/google-fonts', {
+      families: {
+        Rubik: {
+          wght: [400, 500],
+        },
+      },
+      display: 'swap',
+    }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
