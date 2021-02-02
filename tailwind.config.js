@@ -8,9 +8,14 @@ module.exports = {
     extend: {
       colors: {
         neutral: 'var(--color-grayish-blue)',
-        primary: 'var(--color-soft-blue)',
-        'primary-dark': 'var(--color-dark-blue)',
-        secondary: 'var(--color-soft-red)',
+        primary: {
+          DEFAULT: 'var(--color-soft-blue)',
+          dark: 'var(--color-dark-blue)',
+        },
+        secondary: {
+          DEFAULT: 'var(--color-soft-red)',
+          dark: 'var(--color-soft-red-dark)',
+        },
       },
     },
   },
