@@ -80,6 +80,8 @@ export default Vue.extend({
         'transition-all',
         'md:transition-none',
 
+        'uppercase',
+
         {
           '-top-full': !this.show,
           'top-0': this.show,
@@ -105,8 +107,6 @@ export default Vue.extend({
 
         'text-xl',
         'md:text-sm',
-
-        'uppercase',
 
         'text-center',
 
