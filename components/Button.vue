@@ -29,6 +29,10 @@ export default Vue.extend({
       type: String,
       default: 'primary',
     },
+    noXPadding: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -36,56 +40,54 @@ export default Vue.extend({
       return this.$listeners;
     },
 
-    classname (): Array<String> {
-      return [
-        'inline-block',
-        'px-8',
-        'py-3',
-        'rounded',
-        'text-sm',
-        'uppercase',
-        'focus:outline-none',
-        'focus:ring-2',
-        'focus:ring-offset-2',
-        'text-center',
-        ...this.getVariantClasses(),
-      ];
+    classname (): Object {
+      return {
+        'inline-block': true,
+        'font-medium': true,
+        'py-3': true,
+        rounded: true,
+        'text-sm': true,
+        'focus:outline-none': true,
+        'focus:ring-2': true,
+        'focus:ring-offset-2': true,
+        'text-center': true,
+        'shadow-lg': true,
+        'px-7': !this.noXPadding,
+
+        // Primary.
+        'bg-primary': this.isVariant(['primary']),
+        'hover:bg-primary-dark': this.isVariant(['primary']),
+        'focus:ring-primary-dark': this.isVariant(['primary']),
+
+        // Secondary.
+        'bg-secondary': this.isVariant(['secondary']),
+        'hover:bg-secondary-dark': this.isVariant(['secondary']),
+        'focus:ring-secondary': this.isVariant(['secondary']),
+
+        // Light.
+        'bg-gray-100': this.isVariant(['light']),
+        'hover:bg-gray-200': this.isVariant(['light']),
+        'focus:ring-gray-100': this.isVariant(['light']),
+        'text-gray-600': this.isVariant(['light']),
+
+        // Outline.
+        'bg-transparent': this.isVariant(['white-outline']),
+        'hover:bg-white': this.isVariant(['white-outline']),
+        'ring-white': this.isVariant(['white-outline']),
+        'ring-2': this.isVariant(['white-outline']),
+        'hover:text-primary-dark': this.isVariant(['white-outline']),
+        'focus:ring-offset-primary-dark': this.isVariant(['white-outline']),
+
+        // General, used by one or more variant.
+        'text-white': this.isVariant(['primary', 'secondary', 'white-outline']),
+        'focus:ring-offset-white': this.isVariant(['primary', 'secondary', 'light']),
+      };
     },
   },
 
   methods: {
-    getVariantClasses (): Array<String> {
-      const classes = [];
-
-      if (this.variant === 'primary') {
-        classes.push(
-          'bg-primary',
-          'hover:bg-primary-dark',
-          'focus:ring-primary',
-          'text-white',
-          'focus:ring-offset-white',
-        );
-      } else if (this.variant === 'secondary') {
-        classes.push(
-          'bg-secondary',
-          'hover:bg-secondary-dark',
-          'focus:ring-secondary',
-          'text-white',
-          'focus:ring-offset-white',
-        );
-      } else if (this.variant === 'white-outline') {
-        classes.push(
-          'bg-transparent',
-          'hover:bg-white',
-          'ring-white',
-          'ring-2',
-          'text-white',
-          'hover:text-primary-dark',
-          'focus:ring-offset-primary-dark',
-        );
-      }
-
-      return classes;
+    isVariant (variants: Array<String>): Boolean {
+      return variants.includes(this.variant);
     },
   },
 });
