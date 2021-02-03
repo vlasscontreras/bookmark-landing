@@ -3,3 +3,11 @@
     <slot />
   </div>
 </template>
+
+<style scoped>
+@screen lg {
+  .container {
+    max-width: 1110px;
+  }
+}
+</style>
