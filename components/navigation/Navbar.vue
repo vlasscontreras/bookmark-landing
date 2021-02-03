@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <Container class="px-8 py-10 flex items-center justify-between">
+    <Container class="py-10 flex items-center justify-between">
       <nuxt-link to="/">
         <Logo />
       </nuxt-link>
