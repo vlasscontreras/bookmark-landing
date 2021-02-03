@@ -60,7 +60,23 @@ export default {
   },
 
   // Internationalization configuration: https://i18n.nuxtjs.org/
-  i18n: {},
+  i18n: {
+    lazy: true,
+    langDir: 'i18n/',
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en.ts',
+      },
+      {
+        code: 'es',
+        name: 'Español',
+        file: 'es.ts',
+      },
+    ],
+    defaultLocale: 'en',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
