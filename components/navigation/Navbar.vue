@@ -1,7 +1,7 @@
 <template>
   <nav>
     <Container class="py-10 flex items-center justify-between">
-      <nuxt-link to="/">
+      <nuxt-link :to="localePath('/')">
         <Logo />
       </nuxt-link>
 
