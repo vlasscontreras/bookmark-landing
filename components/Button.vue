@@ -80,8 +80,8 @@ export default Vue.extend({
           'ring-white',
           'ring-2',
           'text-white',
-          'hover:text-primary',
-          'focus:ring-offset-primary',
+          'hover:text-primary-dark',
+          'focus:ring-offset-primary-dark',
         );
       }
 
