@@ -66,12 +66,12 @@ export default {
     locales: [
       {
         code: 'en',
-        name: 'English',
+        name: '🇺🇸 English',
         file: 'en.ts',
       },
       {
         code: 'es',
-        name: 'Español',
+        name: '🇪🇸 Español',
         file: 'es.ts',
       },
     ],
