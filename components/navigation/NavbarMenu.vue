@@ -1,6 +1,6 @@
 <template>
   <ul role="menu" :class="menuClass">
-    <li class="menu-header flex justify-between items-center md:hidden pb-10">
+    <li class="menu-header flex justify-between items-center md:hidden pb-10 w-full">
       <Logo color="#fff" />
 
       <button @click="close">
@@ -24,9 +24,13 @@
       Log In
     </menu-item>
 
-    <menu-item aria-hidden="true" to="/login" variant="white-outline" classname="mt-6 w-full md:hidden" button>
+    <menu-item to="/login" variant="white-outline" classname="text-xl mt-6 w-full md:hidden" button>
       Log In
     </menu-item>
+
+    <li class="mt-auto md:hidden">
+      <SocialNav />
+    </li>
   </ul>
 </template>
 
@@ -59,7 +63,9 @@ export default Vue.extend({
 
         'left-0',
 
-        'md:flex',
+        'flex',
+        'flex-col',
+        'md:flex-row',
 
         'md:top-auto',
 

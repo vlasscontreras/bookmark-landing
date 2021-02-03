@@ -1,5 +1,5 @@
 <template>
-  <li role="menu-item">
+  <li role="menu-item" class="w-full md:w-auto">
     <Button v-if="button" v-bind="$attrs" :class="classname">
       <slot />
     </Button>
