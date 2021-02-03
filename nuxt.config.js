@@ -48,6 +48,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://i18n.nuxtjs.org/
+    'nuxt-i18n',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -56,6 +58,9 @@ export default {
       lang: 'en',
     },
   },
+
+  // Internationalization configuration: https://i18n.nuxtjs.org/
+  i18n: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
