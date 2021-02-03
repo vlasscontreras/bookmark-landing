@@ -29,7 +29,7 @@
     </menu-item>
 
     <li class="mt-auto md:hidden">
-      <SocialNav />
+      <social-nav class="justify-center" />
     </li>
   </ul>
 </template>
