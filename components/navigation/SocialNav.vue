@@ -1,9 +1,9 @@
 <template>
-  <div class="flex items-center justify-center">
-    <a href="https://www.facebook.com/bookmark.io" class="px-4 inline-block">
+  <div class="grid items-center gap-8 grid-flow-col auto-cols-max">
+    <a href="https://www.facebook.com/bookmark.io" class="inline-block">
       <Facebook width="24" class="text-white" />
     </a>
-    <a href="https://www.twitter.com/bookmark.io" class="px-4 inline-block">
+    <a href="https://www.twitter.com/bookmark.io" class="inline-block">
       <Twitter width="24" class="text-white" />
     </a>
   </div>
