@@ -20,7 +20,11 @@
       Contact
     </menu-item>
 
-    <menu-item to="/login" variant="secondary" classname="md:ml-4 mt-6 md:mt-0 w-full md:w-auto" button>
+    <menu-item to="/login" variant="secondary" classname="ml-4 hidden md:block" button>
+      Log In
+    </menu-item>
+
+    <menu-item aria-hidden="true" to="/login" variant="white-outline" classname="mt-6 w-full md:hidden" button>
       Log In
     </menu-item>
   </ul>
