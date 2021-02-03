@@ -1,9 +1,5 @@
 <template>
-  <h1>Test</h1>
+  <main>
+    <HomeHeader />
+  </main>
 </template>
-
-<script lang="ts">
-import Vue from 'vue';
-
-export default Vue.extend({});
-</script>
