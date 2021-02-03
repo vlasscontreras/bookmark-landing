@@ -9,23 +9,23 @@
     </li>
 
     <menu-item to="/features" :classname="[itemClass, 'border-t']" active-class="text-secondary">
-      Features
+      {{ $t('features') }}
     </menu-item>
 
     <menu-item to="/pricing" :classname="itemClass" active-class="text-secondary">
-      Pricing
+      {{ $t('pricing') }}
     </menu-item>
 
     <menu-item to="/contact" :classname="itemClass" active-class="text-secondary">
-      Contact
+      {{ $t('contact') }}
     </menu-item>
 
     <menu-item to="/login" variant="secondary" classname="ml-4 hidden md:block" button>
-      Log In
+      {{ $t('login') }}
     </menu-item>
 
     <menu-item to="/login" variant="white-outline" classname="text-xl mt-6 w-full md:hidden" button>
-      Log In
+      {{ $t('login') }}
     </menu-item>
 
     <li class="mt-auto md:hidden">
