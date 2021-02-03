@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-primary-dark py-8">
-    <Container class="gap-4 md:gap-20 grid">
+    <Container class="gap-4 md:gap-10 lg:gap-20 grid">
       <nuxt-link :to="localePath('/')" class="mb-4 md:mb-0">
         <Logo color="white" class="mx-auto md:ml-0" />
       </nuxt-link>
