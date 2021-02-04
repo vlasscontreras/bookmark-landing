@@ -49,14 +49,14 @@ export default Vue.extend({
   computed: {
     menuClass (): String {
       return classnames(
-        'absolute',
+        'fixed',
         'md:relative',
 
         'bg-opacity-90',
         'bg-primary-dark',
         'md:bg-transparent',
 
-        'h-full',
+        'h-screen',
         'md:h-auto',
 
         'items-center',
@@ -69,7 +69,7 @@ export default Vue.extend({
 
         'md:top-auto',
 
-        'w-full',
+        'w-screen',
         'md:w-auto',
 
         'px-8',
@@ -83,7 +83,7 @@ export default Vue.extend({
         'uppercase',
 
         {
-          '-top-full': !this.show,
+          '-top-screen-y': !this.show,
           'top-0': this.show,
         },
       );

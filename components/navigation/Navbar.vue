@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="z-index-10">
     <Container class="py-10 flex items-center justify-between">
       <nuxt-link :to="localePath('/')">
         <Logo />

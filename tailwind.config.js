@@ -23,6 +23,10 @@ module.exports = {
           dark: '#e94949',
         },
       },
+
+      inset: {
+        '-screen-y': '-100vh',
+      },
     },
   },
   variants: {
