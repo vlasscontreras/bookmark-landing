@@ -7,7 +7,7 @@
 <style scoped>
 @screen lg {
   .container {
-    max-width: 1110px;
+    max-width: 1164px;
   }
 }
 </style>
