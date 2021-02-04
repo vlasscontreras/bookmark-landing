@@ -1,9 +1,9 @@
 <template>
   <ul role="menu" :class="menuClass">
-    <li class="menu-header flex justify-between items-center md:hidden pb-10 w-full">
+    <li role="menuitem" class="menu-header flex justify-between items-center md:hidden pb-10 w-full">
       <Logo color="#fff" />
 
-      <button @click="close">
+      <button :aria-label="$t('closeMenu')" @click="close">
         <Close />
       </button>
     </li>
@@ -28,7 +28,7 @@
       {{ $t('login') }}
     </menu-item>
 
-    <li class="mt-auto md:hidden">
+    <li role="menuitem" class="mt-auto md:hidden">
       <social-nav class="justify-center" />
     </li>
   </ul>
@@ -52,7 +52,7 @@ export default Vue.extend({
         'fixed',
         'md:relative',
 
-        'bg-opacity-90',
+        'bg-opacity-95',
         'bg-primary-dark',
         'md:bg-transparent',
 
