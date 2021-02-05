@@ -1,7 +1,7 @@
-export interface Tab {
-  id: String;
+export interface Feature {
+  name: String;
   title: String;
-  subTitle: String;
   content: String;
-  path: String,
+  path: String;
+  image: String;
 };
