@@ -1,15 +1,18 @@
 <template>
   <div class="tabs flex justify-center flex-col md:flex-row max-w-2xl mx-auto mb-12">
-    <Tab v-for="tab in tabs" :key="tab.id" :current="tab.id === current" @click="setCurrent(tab.id)">
+    <Tab v-for="(tab, index) in tabs" :key="`${tab.title}-tab`" :current="isCurrent(tab.title, index)" @click="setCurrent(tab.title)">
       {{ tab.title }}
     </Tab>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { VueConstructor } from 'vue';
 
-export default Vue.extend({
+import TabMixin from '@/mixins/Tabs';
+
+export default (Vue as VueConstructor<Vue & InstanceType<typeof TabMixin>>).extend({
+  mixins: [TabMixin],
   props: {
     tabs: {
       type: Array,
@@ -22,8 +25,13 @@ export default Vue.extend({
   },
 
   methods: {
-    setCurrent (id: String) {
-      this.$emit('change', id);
+    /**
+     * Set the current tab
+     *
+     * @param {String} id Tab ID
+     */
+    setCurrent (title: String) {
+      this.$emit('change', this.getId(title));
     },
   },
 });
