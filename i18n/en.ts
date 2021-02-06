@@ -61,5 +61,27 @@ export default {
       heading: 'Download the extension',
       blurb: 'We\'ve got more browsers in the pipeline. Please do let us know if you\'ve got a favourite you\'d like us to prioritize.',
     },
+    faq: {
+      heading: 'Frequently Asked Questions',
+      blurb: 'Here are some of our FAQs. If you have any other questions you\'d like answered please feel free to email us.',
+      content: [
+        {
+          heading: 'What is Bookmark?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+        {
+          heading: 'How can I request a new browser?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+        {
+          heading: 'Is there a mobile app?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+        {
+          heading: 'What about other Chromium browsers?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+      ],
+    },
   },
 };

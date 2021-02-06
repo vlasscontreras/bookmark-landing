@@ -61,5 +61,27 @@ export default {
       heading: 'Descarga la extensión',
       blurb: 'Tenemos más navegadores en proceso. Haznos saber si tienes un favorito que te gustaría que prioricemos!',
     },
+    faq: {
+      heading: 'Preguntas Frecuentes',
+      blurb: 'Estas son algunas de nuestras preguntas frecuentes. Si tienes otras preguntas que te gustaría que contestáramos, siéntete libre de enviarnos un correo electrónico.',
+      content: [
+        {
+          heading: '¿Qué es Bookmark?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+        {
+          heading: '¿Cómo puedo solicitar un nuevo navegador?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+        {
+          heading: '¿Hay app móvil?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+        {
+          heading: '¿Qué hay de otros navegadores Chromium?',
+          content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
+        },
+      ],
+    },
   },
 };

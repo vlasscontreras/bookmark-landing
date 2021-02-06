@@ -3,5 +3,6 @@
     <HomeHeader />
     <Features />
     <DownloadExtension />
+    <FAQ />
   </main>
 </template>
