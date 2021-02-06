@@ -30,6 +30,10 @@ export default {
     opera: 'Logo de Opera',
   },
 
+  errors: {
+    email: 'Ups, asegurate de que es un email',
+  },
+
   /* Sections */
   sections: {
     hero: {
@@ -82,6 +86,11 @@ export default {
           content: 'Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat. Lorem ipsum dolor sit amet consecuat.',
         },
       ],
+    },
+    contact: {
+      heading: 'Mantente al tanto de lo que hacemos',
+      headline: 'Más de 35,000+ ya se unieron',
+      button: 'Contáctanos',
     },
   },
 };

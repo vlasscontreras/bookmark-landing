@@ -4,5 +4,6 @@
     <Features />
     <DownloadExtension />
     <FAQ />
+    <Contact />
   </main>
 </template>
