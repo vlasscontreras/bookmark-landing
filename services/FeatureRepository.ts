@@ -1,6 +1,6 @@
 import { Feature } from '@/types';
 
-import features from '@/static/features.json';
+import features from '@/content/features';
 
 export default class FeatureRepository {
   /**
