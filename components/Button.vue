@@ -1,13 +1,13 @@
 <template>
-  <nuxt-link v-if="to !== null" :to="to" :class="classname" v-on="listeners">
+  <nuxt-link v-if="to !== null" :to="to" :class="classname" v-on="listeners" :disabled="disabled">
     <slot />
   </nuxt-link>
 
-  <a v-else-if="href !== null" :href="href" :class="classname" v-on="listeners">
+  <a v-else-if="href !== null" :href="href" :class="classname" v-on="listeners" :disabled="disabled">
     <slot />
   </a>
 
-  <button v-else :class="classname" v-on="listeners">
+  <button v-else :class="classname" v-on="listeners" :disabled="disabled">
     <slot />
   </button>
 </template>
@@ -24,6 +24,10 @@ export default Vue.extend({
     to: {
       type: String,
       default: null,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
     variant: {
       type: String,
@@ -53,6 +57,8 @@ export default Vue.extend({
         'text-center': true,
         'shadow-lg': true,
         'px-7': !this.noXPadding,
+        'pointer-events-none': this.disabled,
+        'opacity-80': this.disabled,
 
         // Primary.
         'bg-primary': this.isVariant(['primary']),
