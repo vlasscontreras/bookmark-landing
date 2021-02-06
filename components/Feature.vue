@@ -2,7 +2,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-20">
     <div class="col relative">
       <InfiniteShape class="bg-primary right-1/4 md:right-1/3 top-11 md:top-36" direction="left" />
-      <component :is="content.image" class="relative max-w-full" />
+      <component :is="content.image" class="relative max-w-full mx-auto" />
     </div>
 
     <div class="col">
