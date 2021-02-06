@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20">
+  <section class="py-16 md:py-20">
     <Container>
       <!-- Section header -->
       <div class="max-w-lg mx-auto">
@@ -13,7 +13,7 @@
       </div>
 
       <!-- Section Tabs -->
-      <TabGroup :tabs="features" :component="featureComponent" />
+      <TabGroup :tabs="features" :component="featureComponent" class="text-center md:text-left" />
     </Container>
   </section>
 </template>
