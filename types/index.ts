@@ -1,6 +1,6 @@
 export interface Feature {
-  name: String;
   title: String;
+  heading: String;
   content: String;
   path: String;
   image: String;

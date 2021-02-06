@@ -21,27 +21,36 @@
 <script lang="ts">
 import Vue from 'vue';
 
-import FeatureRepository from '@/services/FeatureRepository';
 import FeatureContent from '@/components/Feature.vue';
-import { Feature } from '@/types';
 
 export default Vue.extend({
-  props: {
-    featureRepository: {
-      type: FeatureRepository,
-      default: () => new FeatureRepository(),
-    },
-  },
-
   data () {
     return {
-      features: [] as Array<Feature>,
       featureComponent: FeatureContent,
+      features: [
+        {
+          title: this.$t('sections.features.content.bookmark.title'),
+          heading: this.$t('sections.features.content.bookmark.heading'),
+          content: this.$t('sections.features.content.bookmark.content'),
+          path: '/',
+          image: 'FeatureBookmark',
+        },
+        {
+          title: this.$t('sections.features.content.search.title'),
+          heading: this.$t('sections.features.content.search.heading'),
+          content: this.$t('sections.features.content.search.content'),
+          path: '/',
+          image: 'FeatureSearch',
+        },
+        {
+          title: this.$t('sections.features.content.share.title'),
+          heading: this.$t('sections.features.content.share.heading'),
+          content: this.$t('sections.features.content.share.content'),
+          path: '/',
+          image: 'FeatureShare',
+        },
+      ],
     };
-  },
-
-  async created () {
-    this.features = await this.featureRepository.all();
   },
 });
 </script>
