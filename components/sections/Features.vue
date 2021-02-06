@@ -13,8 +13,7 @@
       </div>
 
       <!-- Section Tabs -->
-      <TabCollection :tabs="features" :current="currentTab" @change="setCurrent" />
-      <TabContentCollection :tabs="features" :current="currentTab" :component="featureComponent" />
+      <TabGroup :tabs="features" :component="featureComponent" />
     </Container>
   </section>
 </template>
@@ -36,7 +35,6 @@ export default Vue.extend({
 
   data () {
     return {
-      currentTab: '',
       features: [] as Array<Feature>,
       featureComponent: FeatureContent,
     };
@@ -44,12 +42,6 @@ export default Vue.extend({
 
   async created () {
     this.features = await this.featureRepository.all();
-  },
-
-  methods: {
-    setCurrent (id: string) {
-      this.currentTab = id;
-    },
   },
 });
 </script>
