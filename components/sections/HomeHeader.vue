@@ -10,21 +10,21 @@
       <!-- Text & CTA Column -->
       <div class="col text-center md:text-left">
         <h1 class="text-primary-dark font-medium text-3xl sm:text-4xl md:text-5xl mb-6">
-          A Simple Bookmark Manager
+          {{ $t('sections.hero.heading') }}
         </h1>
 
         <p class="text-neutral text-lg mb-6">
-          A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
+          {{ $t('sections.hero.blurb') }}
         </p>
 
         <!-- Buttons -->
         <div class="grid grid-flow-col gap-4 justify-center md:justify-start">
           <Button class="px-3 sm:px-7" no-x-padding>
-            Get it on Chrome
+            {{ $t('getItChrome') }}
           </Button>
 
           <Button variant="light" class="px-3 sm:px-7" no-x-padding>
-            Get it on Firefox
+            {{ $t('getItFirefox') }}
           </Button>
         </div>
       </div>

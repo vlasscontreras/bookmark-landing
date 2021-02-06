@@ -4,11 +4,11 @@
       <!-- Section header -->
       <div class="max-w-lg mx-auto">
         <h2 class="text-center text-primary-dark font-medium text-2xl sm:text-3xl md:text-4xl mb-6">
-          Download the extension
+          {{ $t('sections.extension.heading') }}
         </h2>
 
         <p class="text-center text-neutral text-lg mb-12">
-          We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.
+          {{ $t('sections.extension.blurb') }}
         </p>
       </div>
 

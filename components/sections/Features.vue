@@ -4,11 +4,11 @@
       <!-- Section header -->
       <div class="max-w-lg mx-auto">
         <h2 class="text-center text-primary-dark font-medium text-2xl sm:text-3xl md:text-4xl mb-6">
-          Features
+          {{ $t('sections.features.heading') }}
         </h2>
 
         <p class="text-center text-neutral text-lg mb-6">
-          Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+          {{ $t('sections.features.blurb') }}
         </p>
       </div>
 

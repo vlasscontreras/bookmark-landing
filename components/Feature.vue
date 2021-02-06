@@ -7,7 +7,7 @@
 
     <div class="col">
       <h3 class="text-primary-dark font-medium text-2xl sm:text-3xl md:text-4xl mb-6">
-        {{ content.title }}
+        {{ content.heading }}
       </h3>
 
       <p class="text-neutral text-lg mb-6">
@@ -15,7 +15,7 @@
       </p>
 
       <Button :to="content.path">
-        More Info
+        {{ $t('moreInfo') }}
       </Button>
     </div>
   </div>

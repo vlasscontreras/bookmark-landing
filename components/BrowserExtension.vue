@@ -3,16 +3,16 @@
     <component :is="icon" class="mx-auto mb-6" />
 
     <h3 class="text-primary-dark font-medium text-xl mb-2">
-      Add to {{ name }}
+      {{ `${$t('addTo')} ${name}` }}
     </h3>
     <div class="text-gray-400 text-sm mb-6">
-      Minimum version {{ minVersion }}
+      {{ `${$t('minVersion')} ${minVersion}` }}
     </div>
 
     <Dots class="-mx-6 mb-6" :width="false" />
 
     <Button class="w-full">
-      Add & Install Extension
+      {{ $t('addInstallExtension') }}
     </Button>
   </div>
 </template>
