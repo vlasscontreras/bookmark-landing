@@ -8,23 +8,23 @@
       </button>
     </li>
 
-    <menu-item :to="localePath('/features')" :classname="[itemClass, 'border-t']" active-class="text-secondary">
+    <menu-item :to="localePath('/')" :classname="[itemClass, 'border-t']" active-class="text-secondary">
       {{ $t('features') }}
     </menu-item>
 
-    <menu-item :to="localePath('/pricing')" :classname="itemClass" active-class="text-secondary">
+    <menu-item :to="localePath('/')" :classname="itemClass" active-class="text-secondary">
       {{ $t('pricing') }}
     </menu-item>
 
-    <menu-item :to="localePath('/contact')" :classname="itemClass" active-class="text-secondary">
+    <menu-item :to="localePath('/')" :classname="itemClass" active-class="text-secondary">
       {{ $t('contact') }}
     </menu-item>
 
-    <menu-item :to="localePath('/login')" variant="secondary" classname="ml-4 hidden md:block" button>
+    <menu-item :to="localePath('/')" variant="secondary" classname="ml-4 hidden md:block" button>
       {{ $t('login') }}
     </menu-item>
 
-    <menu-item :to="localePath('/login')" variant="white-outline" classname="text-xl mt-6 w-full md:hidden" button>
+    <menu-item :to="localePath('/')" variant="white-outline" classname="text-xl mt-6 w-full md:hidden" button>
       {{ $t('login') }}
     </menu-item>
 

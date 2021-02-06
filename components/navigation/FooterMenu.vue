@@ -1,19 +1,19 @@
 <template>
   <ul>
     <li>
-      <nuxt-link :to="localePath('/features')" active-class="text-secondary">
+      <nuxt-link :to="localePath('/')" active-class="text-secondary">
         {{ $t('features') }}
       </nuxt-link>
     </li>
 
     <li>
-      <nuxt-link :to="localePath('/pricing')" active-class="text-secondary">
+      <nuxt-link :to="localePath('/')" active-class="text-secondary">
         {{ $t('pricing') }}
       </nuxt-link>
     </li>
 
     <li>
-      <nuxt-link :to="localePath('/contact')" active-class="text-secondary">
+      <nuxt-link :to="localePath('/')" active-class="text-secondary">
         {{ $t('contact') }}
       </nuxt-link>
     </li>
