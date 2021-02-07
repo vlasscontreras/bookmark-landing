@@ -14,7 +14,7 @@
         <form class="grid gap-4" @submit.prevent="submit">
           <Input v-model="email" :placeholder="$t('placeholders.email')" :invalid="errors.email" :disabled="loading" required />
 
-          <Button variant="secondary" :disabled="loading" class="self-start">
+          <Button type="submit" variant="secondary" :disabled="loading" class="self-start">
             {{ $t('sections.contact.button') }}
           </Button>
         </form>

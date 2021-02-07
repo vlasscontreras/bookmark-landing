@@ -19,11 +19,11 @@
 
         <!-- Buttons -->
         <div class="grid grid-flow-col gap-4 justify-center md:justify-start">
-          <Button class="px-3 sm:px-7" no-x-padding>
+          <Button type="button" class="px-3 sm:px-7" no-x-padding>
             {{ $t('getItChrome') }}
           </Button>
 
-          <Button variant="light" class="px-3 sm:px-7" no-x-padding>
+          <Button type="button" variant="light" class="px-3 sm:px-7" no-x-padding>
             {{ $t('getItFirefox') }}
           </Button>
         </div>

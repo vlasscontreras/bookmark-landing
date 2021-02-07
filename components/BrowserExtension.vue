@@ -11,7 +11,7 @@
 
     <Dots class="-mx-6 mb-6" :width="false" />
 
-    <Button class="w-full">
+    <Button type="button" class="w-full">
       {{ $t('addInstallExtension') }}
     </Button>
   </div>

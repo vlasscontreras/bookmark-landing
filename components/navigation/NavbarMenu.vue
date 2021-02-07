@@ -3,7 +3,7 @@
     <li role="menuitem" class="menu-header flex justify-between items-center md:hidden pb-10 w-full">
       <Logo color="#fff" />
 
-      <button :aria-label="$t('closeMenu')" @click="close">
+      <button type="button" :aria-label="$t('closeMenu')" @click="close">
         <Close />
       </button>
     </li>
@@ -20,11 +20,23 @@
       {{ $t('contact') }}
     </menu-item>
 
-    <menu-item :to="localePath('/')" variant="secondary" classname="ml-4 hidden md:block" as="button" @click="close">
+    <menu-item
+      :to="localePath('/')"
+      variant="secondary"
+      classname="ml-4 hidden md:block"
+      as="button"
+      @click="close"
+    >
       {{ $t('login') }}
     </menu-item>
 
-    <menu-item :to="localePath('/')" variant="white-outline" classname="text-xl mt-6 w-full md:hidden" as="button" @click="close">
+    <menu-item
+      :to="localePath('/')"
+      variant="white-outline"
+      classname="text-xl mt-6 w-full md:hidden"
+      as="button"
+      @click="close"
+    >
       {{ $t('login') }}
     </menu-item>
 

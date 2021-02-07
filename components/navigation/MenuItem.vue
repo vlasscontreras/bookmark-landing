@@ -1,14 +1,14 @@
 <template>
-  <li role="menuitem" class="w-full md:w-auto">
-    <Button v-if="as === 'button'" v-bind="$attrs" :class="classname" @click="click">
+  <li role="menuitem" class="w-full md:w-auto" :aria-labelledby="id">
+    <Button v-if="is('button')" v-bind="$attrs" :id="id" :class="classname" @click="click">
       <slot />
     </Button>
 
-    <a v-else-if="as === 'anchor'" v-bind="$attrs" :class="classname" @click="click">
+    <a v-else-if="is('anchor')" v-bind="$attrs" :id="id" :class="classname" @click="click">
       <slot />
     </a>
 
-    <nuxt-link v-else v-bind="$attrs" :class="classname" @click="click">
+    <nuxt-link v-else v-bind="$attrs" :id="id" :class="classname" @click="click">
       <slot />
     </nuxt-link>
   </li>
@@ -33,9 +33,23 @@ export default Vue.extend({
     },
   },
 
+  data () {
+    return {
+      id: '',
+    };
+  },
+
+  mounted () {
+    this.id = 'menu-item-' + Math.random().toString(36).substr(2, 9);
+  },
+
   methods: {
     click () {
       this.$emit('click');
+    },
+
+    is (type: String) {
+      return this.as === type;
     },
   },
 });

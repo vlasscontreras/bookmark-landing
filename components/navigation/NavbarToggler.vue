@@ -1,5 +1,5 @@
 <template>
-  <button class="text-primary-dark focus:outline-none" :aria-label="$t('toggleMenu')" v-on="listeners">
+  <button type="button" class="text-primary-dark focus:outline-none" :aria-label="$t('toggleMenu')" v-on="listeners">
     <Burger fill="currentColor" width="18" />
   </button>
 </template>
