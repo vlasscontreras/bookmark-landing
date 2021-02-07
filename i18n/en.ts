@@ -30,6 +30,10 @@ export default {
     opera: 'Logo of Opera',
   },
 
+  placeholders: {
+    email: 'Enter your email address',
+  },
+
   errors: {
     email: 'Whoops, make sure it\'s an email',
   },

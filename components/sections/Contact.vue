@@ -12,7 +12,7 @@
 
         <!-- Form -->
         <form class="grid gap-4" @submit.prevent="submit">
-          <Input v-model="email" placeholder="Enter your email address" :invalid="errors.email" :disabled="loading" />
+          <Input v-model="email" :placeholder="$t('placeholders.email')" :invalid="errors.email" :disabled="loading" />
 
           <Button variant="secondary" :disabled="loading" class="self-start">
             {{ $t('sections.contact.button') }}
