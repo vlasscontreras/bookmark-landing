@@ -37,18 +37,18 @@ export default Vue.extend({
 
 <style scoped>
 .slide-enter-active {
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
 }
 
 .slide-leave-active {
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.3, 1);
 }
 
 .slide-enter-to,
 .slide-leave {
-  max-height: 100px;
+  max-height: 40rem;
   overflow: hidden;
 }
 
