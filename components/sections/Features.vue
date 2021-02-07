@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 md:py-20">
+  <section id="features" class="py-16 md:py-20">
     <Container>
       <!-- Section header -->
       <div class="max-w-lg mx-auto">

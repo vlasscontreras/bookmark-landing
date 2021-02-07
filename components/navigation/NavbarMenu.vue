@@ -8,23 +8,23 @@
       </button>
     </li>
 
-    <menu-item :to="localePath('/')" :classname="[itemClass, 'border-t']" active-class="text-secondary">
+    <menu-item href="#features" :classname="[itemClass, 'border-t']" active-class="md:text-secondary" as="anchor" @click="close">
       {{ $t('features') }}
     </menu-item>
 
-    <menu-item :to="localePath('/')" :classname="itemClass" active-class="text-secondary">
+    <menu-item href="#pricing" :classname="itemClass" active-class="md:text-secondary" as="anchor" @click="close">
       {{ $t('pricing') }}
     </menu-item>
 
-    <menu-item :to="localePath('/')" :classname="itemClass" active-class="text-secondary">
+    <menu-item href="#contact" :classname="itemClass" active-class="md:text-secondary" as="anchor" @click="close">
       {{ $t('contact') }}
     </menu-item>
 
-    <menu-item :to="localePath('/')" variant="secondary" classname="ml-4 hidden md:block" button>
+    <menu-item :to="localePath('/')" variant="secondary" classname="ml-4 hidden md:block" as="button" @click="close">
       {{ $t('login') }}
     </menu-item>
 
-    <menu-item :to="localePath('/')" variant="white-outline" classname="text-xl mt-6 w-full md:hidden" button>
+    <menu-item :to="localePath('/')" variant="white-outline" classname="text-xl mt-6 w-full md:hidden" as="button" @click="close">
       {{ $t('login') }}
     </menu-item>
 
@@ -113,6 +113,7 @@ export default Vue.extend({
         'text-white',
         'hover:text-primary-dark',
         'md:text-primary-dark',
+        'md:hover:text-secondary',
 
         'hover:bg-white',
         'md:hover:bg-transparent',

@@ -1,21 +1,21 @@
 <template>
   <ul>
     <li>
-      <nuxt-link :to="localePath('/')" active-class="text-secondary">
+      <a href="#features" class="hover:text-secondary">
         {{ $t('features') }}
-      </nuxt-link>
+      </a>
     </li>
 
     <li>
-      <nuxt-link :to="localePath('/')" active-class="text-secondary">
+      <a href="#pricing" class="hover:text-secondary">
         {{ $t('pricing') }}
-      </nuxt-link>
+      </a>
     </li>
 
     <li>
-      <nuxt-link :to="localePath('/')" active-class="text-secondary">
+      <a href="#contact" class="hover:text-secondary">
         {{ $t('contact') }}
-      </nuxt-link>
+      </a>
     </li>
 
     <li>
@@ -23,6 +23,7 @@
         v-for="locale in availableLocales"
         :key="locale.code"
         :to="switchLocalePath(locale.code)"
+        class="hover:text-secondary"
       >
         {{ locale.name }}
       </nuxt-link>

@@ -1,10 +1,14 @@
 <template>
   <li role="menuitem" class="w-full md:w-auto">
-    <Button v-if="button" v-bind="$attrs" :class="classname">
+    <Button v-if="as === 'button'" v-bind="$attrs" :class="classname" @click="click">
       <slot />
     </Button>
 
-    <nuxt-link v-else v-bind="$attrs" :class="classname">
+    <a v-else-if="as === 'anchor'" v-bind="$attrs" :class="classname" @click="click">
+      <slot />
+    </a>
+
+    <nuxt-link v-else v-bind="$attrs" :class="classname" @click="click">
       <slot />
     </nuxt-link>
   </li>
@@ -22,10 +26,16 @@ export default Vue.extend({
       required: false,
       default: '',
     },
-    button: {
-      type: Boolean,
+    as: {
+      type: String,
       required: false,
-      default: false,
+      default: '',
+    },
+  },
+
+  methods: {
+    click () {
+      this.$emit('click');
     },
   },
 });

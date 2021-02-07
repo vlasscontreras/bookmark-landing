@@ -1,13 +1,13 @@
 <template>
-  <nuxt-link v-if="to !== null" :to="to" :class="classname" v-on="listeners" :disabled="disabled">
+  <nuxt-link v-if="to !== null" :to="to" :class="classname" :disabled="disabled" v-on="listeners">
     <slot />
   </nuxt-link>
 
-  <a v-else-if="href !== null" :href="href" :class="classname" v-on="listeners" :disabled="disabled">
+  <a v-else-if="href !== null" :href="href" :class="classname" :disabled="disabled" v-on="listeners">
     <slot />
   </a>
 
-  <button v-else :class="classname" v-on="listeners" :disabled="disabled">
+  <button v-else :class="classname" :disabled="disabled" v-on="listeners">
     <slot />
   </button>
 </template>

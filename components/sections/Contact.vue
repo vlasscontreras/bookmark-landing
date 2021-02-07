@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary py-16 md:py-20">
+  <section id="contact" class="bg-primary py-16 md:py-20">
     <Container>
       <div class="text-center text-white max-w-md mx-auto">
         <div class="uppercase text-sm tracking-widest mb-8">
