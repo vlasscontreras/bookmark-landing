@@ -1,4 +1,4 @@
-# bookmark-landing
+# Bookmark Landing Page
 
 ## Build Setup
 
